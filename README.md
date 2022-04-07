@@ -55,13 +55,14 @@ Values(001,501,1,20.00,5),
 (003,503,3,30.00,4);
 
 Select * from Customer;
-
+--Display whose name starts with A or I
 Select Country from Customer where Lname like 'A%' or lname like 'I%';
 
-
+--Display whose name third letter is 'I'
 select Fname,Lname from customer where Lname like '__I%';
 
-
+--alter the firstname of customer and order table by adding not null
 alter table Customer alter column Fname nvarchar(40) NOT NULL;
 
+--alter customer  ordertable by adding not null DateTime
 alter table Ordertbl alter column orderDate DtaeTime NOT NULL;
